@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.empty;
 
 
-public class TestSolution {
+public class SolutionTest {
     private final Solution solver = new Solution();
 
     @Test
