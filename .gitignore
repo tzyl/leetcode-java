@@ -1,2 +1,21 @@
+# IntelliJ
+*.iml
+*.ipr
+*.iws
 .idea/
+
+# Eclipse
+.classpath
+.project
+
+# OS X
+.DS_Store
+
+# Java
+*.class
+
+# Build Systems
+bin/
+.gradle/
+build/
 out/
