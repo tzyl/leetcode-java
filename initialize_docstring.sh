@@ -37,11 +37,14 @@ echo
 PROBLEM_TITLE=$(echo $PROBLEM | jq -r '.data.question.questionTitle')
 PROBLEM_DESCRIPTION=$(echo $PROBLEM | jq -r '.data.question.content' | sed -e 's/<[^>]*>//g')
 
-echo "/**"
-echo " * $PROBLEM_ID. $PROBLEM_TITLE"
-echo " *"
+LINES=()
+LINES+=("/**")
+LINES+=(" * $PROBLEM_ID. $PROBLEM_TITLE")
+LINES+=(" *")
 for line in $PROBLEM_DESCRIPTION; do
-  echo " * $line"
+  LINES+=(" * $line")
 done
-echo " */"
+LINES+=(" */")
+
+printf "%s\n" "${LINES[@]}" | python3 -c 'import html, sys; [print(html.unescape(l), end="") for l in sys.stdin]'
 
