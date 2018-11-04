@@ -31,7 +31,6 @@ public class SolutionTest {
 
     @Test
     public void testSmallestK() {
-        System.out.println(solver.combine(1000, 0));
         assertThat(solver.combine(1000, 0), containsInAnyOrder(
                 empty()
         ));
