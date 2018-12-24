@@ -13,7 +13,7 @@ trap "rm -f $COOKIE_FILE" EXIT
 
 echo "Getting CSRF token"
 curl -c $COOKIE_FILE --silent "https://leetcode.com" &>/dev/null
-CSRF_TOKEN=$(grep -E 'csrftoken\t\w+' $COOKIE_FILE -o | cut -d $'\t' -f2)
+CSRF_TOKEN=$(grep -E 'csrftoken\s+\w+' $COOKIE_FILE -o | cut -d $'\t' -f2)
 
 echo "Getting all problems"
 PROBLEMS=$(curl --silent https://leetcode.com/api/problems/all/  -H "cookie:  csrftoken=$CSRF_TOKEN" -H "content-type: application/json" -H "accept: application/json" -H "authority: leetcode.com" -H "referer: https://leetcode.com" --compressed)
