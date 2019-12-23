@@ -1,62 +1,62 @@
 /**
  * 87. Scramble String
- * <p>
+ *
  * Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
- * <p>
+ *
  * Below is one possible representation of s1 = "great":
- * <p>
- * <p>
- * great
- * /    \
- * gr    eat
- * / \    /  \
+ *
+ *
+ *     great
+ *    /    \
+ *   gr    eat
+ *  / \    /  \
  * g   r  e   at
- * / \
- * a   t
- * <p>
- * <p>
+ *            / \
+ *           a   t
+ *
+ *
  * To scramble the string, we may choose any non-leaf node and swap its two children.
- * <p>
+ *
  * For example, if we choose the node "gr" and swap its two children, it produces a scrambled string "rgeat".
- * <p>
- * <p>
- * rgeat
- * /    \
- * rg    eat
- * / \    /  \
+ *
+ *
+ *     rgeat
+ *    /    \
+ *   rg    eat
+ *  / \    /  \
  * r   g  e   at
- * / \
- * a   t
- * <p>
- * <p>
+ *            / \
+ *           a   t
+ *
+ *
  * We say that "rgeat" is a scrambled string of "great".
- * <p>
+ *
  * Similarly, if we continue to swap the children of nodes "eat" and "at", it produces a scrambled string "rgtae".
- * <p>
- * <p>
- * rgtae
- * /    \
- * rg    tae
- * / \    /  \
+ *
+ *
+ *     rgtae
+ *    /    \
+ *   rg    tae
+ *  / \    /  \
  * r   g  ta  e
- * / \
- * t   a
- * <p>
- * <p>
+ *        / \
+ *       t   a
+ *
+ *
  * We say that "rgtae" is a scrambled string of "great".
- * <p>
+ *
  * Given two strings s1 and s2 of the same length, determine if s2 is a scrambled string of s1.
- * <p>
+ *
  * Example 1:
- * <p>
- * <p>
+ *
+ *
  * Input: s1 = "great", s2 = "rgeat"
  * Output: true
- * <p>
- * <p>
+ *
+ *
  * Example 2:
- * <p>
- * <p>
+ *
+ *
  * Input: s1 = "abcde", s2 = "caebd"
  * Output: false
  */
